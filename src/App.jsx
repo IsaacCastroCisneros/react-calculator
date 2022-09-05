@@ -68,8 +68,8 @@ function reducer(state,{type,payload})
     }
     case ACTIONS.DELETE:
     {
-       if(state.previosString===undefined)return state
-       if(state.previosString!==undefined && state.currentString===undefined)return state
+       if(state.currentString===undefined)return state
+      
        return{
         ...state,
         currentString:state.currentString.substr(0,state.currentString.length-1),
